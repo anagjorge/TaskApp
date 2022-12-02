@@ -14,7 +14,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class TaskRepository(context: Context) : BaseRepository(context) {
+ class TaskRepository(context: Context) : BaseRepository(context) {
 
     private val remote = RetrofitClient.getService(TaskService::class.java)
 
@@ -44,7 +44,7 @@ class TaskRepository(context: Context) : BaseRepository(context) {
     }
 
 
-    fun create(task: TaskModel, listener: APIListener<Boolean>) {
+     fun create(task: TaskModel, listener: APIListener<Boolean>) {
         if (!isConncetionAvailable()) {
             listener.onFailure(context.getString(R.string.ERROR_INTERNET_CONNECTION))
             return

@@ -143,8 +143,6 @@ class TaskFormActivity : AppCompatActivity(), View.OnClickListener,
 
             //Converte para o formato desejado
             binding.buttonDate.text = SimpleDateFormat("dd/MM/yyyy").format(date)
-
-
         }
 
         viewModel.taskLoad.observe(this) {
